@@ -1,13 +1,27 @@
 
 public abstract class Question 
 {
-	private String text = "";
-	private static int number = 0;
+	private String text;
+	private int number;
+	private static int count = 1;
 	
 	public Question(String txt)
 	{
-		number++;
+		text = txt;
+		number = count;
+		count++;
 	}
 	
-	public 
+	public int getNumber()
+	{
+		return number;
+	}
+	
+	public String getText()
+	{
+		return text;
+	}
+	
+	public abstract String getSolution();
+
 }
