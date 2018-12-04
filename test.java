@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class test 
 {
@@ -7,12 +8,19 @@ public class test
 		String[] arr = new String[] {"blue", "green", "yellow", "pink", "orange"};
 		MultipleChoice mult = new MultipleChoice("What color is the sky?", arr, 'A');
 		TrueFalse tf = new TrueFalse("The sky is pink.", "False");
-		System.out.println(mult);
-		System.out.println(tf);
-		System.out.println(mult.getSolution());
-		System.out.println(tf.getSolution());
-		System.out.println(tf.getNumber());
-		System.out.println(mult.getNumber());
+		ArrayList<Question> test = new ArrayList<Question>();
+		test.add(mult);
+		test.add(tf);
+		test.add(new TrueFalse("Mr. Ellis is cool", "True"));
+		for(Question q: test)
+		{
+			System.out.print(q + "\n");
+		}
+		
+		for(Question q: test)
+		{
+			System.out.print(q.getSolution() + "\n");
+		}
 	}
 
 }
