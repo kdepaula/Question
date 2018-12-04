@@ -11,13 +11,16 @@ public class MultipleChoice extends Question
 		correctAnswer = correctA;
 	}
 	
+	//you have to call the no arguments constructor  FIRST
 
 	public String toString()
 	{
 		String formatChoices = "";
+		char letter = 'A';
 		for(String a : answerChoices)
 		{
-			formatChoices+= "\n   " + a;
+			formatChoices+= "\n   " + letter + ": " + a;
+			letter++;
 		}
 		return ("" + getNumber() + ". "+ getText() + formatChoices);
 	}

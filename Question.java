@@ -5,9 +5,10 @@ public abstract class Question
 	private int number;
 	private static int count = 1;
 	
-	public Question(String txt)
+	public Question(String text)
 	{
-		text = txt;
+		this.text = text;
+		//this part is the field, text is parameter
 		number = count;
 		count++;
 	}
@@ -23,5 +24,5 @@ public abstract class Question
 	}
 	
 	public abstract String getSolution();
-
+	
 }
